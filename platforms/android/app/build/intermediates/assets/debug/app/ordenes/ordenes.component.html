@@ -1,0 +1,56 @@
+<ActionBar class="actionBar" title="Ordenes">
+    <NavigationButton icon="res://ic_menu" (tap)="openDrawer()"></NavigationButton>
+</ActionBar>
+<RadSideDrawer tkExampleTitle tkToggleNavButton>
+    <StackLayout tkDrawerContent class="sideStackLayout drawerBackground">
+        <StackLayout class="sideTitleStackLayout titleBackground">
+            <Label class="drawerTitle" text="Vendedor:"></Label>
+            <Label class="drawerTitle" [text]="name" ([ngModel])="name" textWrap="true"></Label>
+        </StackLayout>
+        <ScrollView>
+            <StackLayout class="sideStackLayout">
+                <StackLayout class="stack-margin" orientation="horizontal" (tap)="toInicio()">
+                    <Image src="res://money" width="32" height="32" stretch="none"></Image>
+                    <Label text="Ventas" class="drawerLabel"></Label>
+                </StackLayout>
+
+                <StackLayout class="stack-margin" orientation="horizontal" (tap)="toInventario()">
+                    <Image src="res://inventario" width="32" height="32" stretch="none"></Image>
+                    <Label text="Inventario" class="drawerLabel"></Label>
+                </StackLayout>
+
+                <StackLayout class="stack-margin" orientation="horizontal" (tap)="toOrdenes()">
+                    <Image src="res://ordenes" width="32" height="32" stretch="none"></Image>
+                    <Label text="Ordenes" class="drawerLabel"></Label>
+                </StackLayout>
+
+                <StackLayout class="stack-margin" orientation="horizontal" (tap)="toAjustes()">
+                    <Image src="res://settings" width="32" height="32" stretch="none"></Image>
+                    <Label text="Ajustes" class="drawerLabel"></Label>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+    <StackLayout tkMainContent>
+        <GridLayout colums="*" rows="*">
+            <ListView col="0" row="0" [items]="orders" (itemTap)="onItemTap($event)" class="list-group">
+                <ng-template let-orders="item" let-i="index" let-odd="odd" let-even="even">
+                    <StackLayout class="list-group-item">
+
+                        <StackLayout orientation="horizontal">
+                            <Label text="Número de Orden: " class="staticLabel"></Label>
+                            <Label [text]="orders.orderId"></Label>
+                        </StackLayout>
+
+                        <StackLayout orientation="horizontal">
+                            <Label text="Total Vendido: " class="staticLabel"></Label>
+                            <Label text="$ "></Label>
+                            <Label [text]="orders.total" textWrap="true"></Label>
+                        </StackLayout>
+
+                    </StackLayout>
+                </ng-template>
+            </ListView>
+        </GridLayout>
+    </StackLayout>>
+</RadSideDrawer>

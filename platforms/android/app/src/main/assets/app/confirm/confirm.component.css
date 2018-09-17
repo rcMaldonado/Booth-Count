@@ -1,0 +1,28 @@
+.img {
+    margin: 5%;
+    width: 35%;
+    height: 35%;
+}
+
+.btnConfirm {
+    border-radius: 50%;
+    background-color: #39a32c;
+    width: 70%;
+    color: white;
+    margin-bottom: 0%;
+}
+
+.lblTitle {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+}
+
+.lblBody {
+    color: black;
+    font-size: 22px;
+    width: 60%;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}

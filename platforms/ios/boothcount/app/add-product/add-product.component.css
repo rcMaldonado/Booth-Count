@@ -1,0 +1,45 @@
+.container {
+    width: 90%;
+    margin-top: 40px;
+}
+
+CardView {
+    background-color: whitesmoke;
+}
+
+.label-margin {
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.textfield-margin {
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+    border-width: 0 0 2 0;
+    border-color: #39a32c;
+}
+
+.dd-border {
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+    border-width: 0 0 2 0;
+    border-color: #39a32c;
+}
+
+.dd {
+    font-size: 18px;
+}
+
+.btnAdd {
+    background-color: #39a32c;
+    color: white;
+    border-radius: 50%;
+    margin: 50px;
+    width: 50%;
+}

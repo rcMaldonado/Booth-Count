@@ -1,0 +1,13 @@
+use_frameworks!
+
+target "boothcount" do
+# Begin Podfile - /Users/LEAFAR_10/Documents/booth-count/node_modules/nativescript-fancyalert/platforms/ios/Podfile 
+ pod 'SCLAlertView-Objective-C' 
+ # End Podfile 
+# Begin Podfile - /Users/LEAFAR_10/Documents/booth-count/node_modules/nativescript-toasts/platforms/ios/Podfile 
+ platform :ios, '8.0'
+pod 'Toast', '~> 3.0'
+ 
+ # End Podfile 
+
+end

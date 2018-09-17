@@ -1,0 +1,11 @@
+<!-- Por alguna razón el sistema no encuentra este archivo. Todo cabio que sea
+para el UI del modal, para editar articulos se debe hacer en bag.modal.ts -->
+<GridLayout>
+    <ListView col="0" [items]="frameworks" class="list-group">
+        <ng-template let-frameworks="item" let-i="index" let-odd="odd" let-even="even">
+            <StackLayout>
+                <Label text="{{ frameworks }}" (tap)="close(frameworks)"> class="label"></Label>
+            </StackLayout>
+        </ng-template>
+    </ListView>
+</GridLayout>

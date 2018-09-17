@@ -1,0 +1,17 @@
+.btnAdd {
+    background-color: #39a32c;
+    color: white;
+    border-radius: 50%;
+    margin: 50px;
+    width: 50%;
+}
+
+.container {
+    width: 80%;
+}
+
+.androidInput {
+    font-size: 20px;
+    border-width: 0 0 2 0;
+    border-color: #39a32c;
+}

@@ -1,0 +1,45 @@
+<ActionBar class="actionBar" title="Bolso de Ventas">
+    <NavigationButton android.systemIcon="ic_menu_back" (tap)="goBack()"></NavigationButton>
+    <ActionItem icon="res://hands" ios.position="right" android.position="actionBar" (tap)="confirmSale()"></ActionItem>
+</ActionBar>
+
+<StackLayout>
+    <GridLayout colums="*, *">
+        <ListView col="0" [items]="sales" (itemTap)="onItemTap($event)" class="list-group">
+            <ng-template let-sales="item" let-i="index" let-odd="odd" let-even="even">
+
+                <GridLayout class="list-group-item" rows="*,*" columns="*">
+                    <StackLayout row="0" col="0" colSpan="0" colSpan="1" colSpan="2">
+
+                        <StackLayout orientation="horizontal">
+                            <Label text="Código: " class="staticLabel"></Label>
+                            <Label [text]="sales.productCode" textWrap="true"></Label>
+                        </StackLayout>
+
+                        <StackLayout orientation="horizontal">
+                            <Label text="Nombre: " class="staticLabel"></Label>
+                            <Label [text]="sales.productName" textWrap="true"></Label>
+                        </StackLayout>
+
+                        <StackLayout orientation="horizontal">
+                            <Label text="Precio Base: " class="staticLabel"></Label>
+                            <Label text="$ "></Label>
+                            <Label [text]="sales.price" textWrap="true"></Label>
+                        </StackLayout>
+
+                        <StackLayout orientation="horizontal">
+                            <Label text="Cantidad a Vender: " class="staticLabel"></Label>
+                            <Label [text]="sales.quantityToSale" textWrap="true"></Label>
+                        </StackLayout>
+
+                        <StackLayout orientation="horizontal">
+                            <Label text="Total: " class="staticLabel"></Label>
+                            <Label text="$ "></Label>
+                            <Label [text]="sales.priceSum" textWrap="true"></Label>
+                        </StackLayout>
+                    </StackLayout>
+                </GridLayout>
+            </ng-template>
+        </ListView>
+    </GridLayout>
+</StackLayout>

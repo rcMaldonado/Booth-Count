@@ -1,0 +1,21 @@
+<ActionBar class="actionBar" title="Orden">
+    <NavigationButton android.systemIcon="ic_menu_back" (tap)="goBack()"></NavigationButton>
+</ActionBar>
+<ScrollView>
+    <StackLayout>
+        <Label text="Número de Orden: {{orderId}}" class="header" textWrap="true"></Label>
+        <Label text="Vendido Por: {{ name}}" class="header" textWrap="true"></Label>
+        <Label text="Productos Vendidos:" class="body-header"></Label>
+
+        <StackLayout *ngFor="let myOrders of order" class="itemList">
+            <Label textWrap="true" class="body" text="Produto: {{ myOrders.productCode }} - {{ myOrders.productName }}"></Label>
+            <GridLayout rows="50,25" columns="*,*">
+                <Label textWrap="true" text="Cantidad Vendida: {{ myOrders.quantity }}" class="body" row="0" col="0"></Label>
+                <Label textWrap="true" text="Precio Base: $ {{ myOrders.productPrice }}" class="body" row="0" col="1"></Label>
+                <Label textWrap="true" text="Total: $ {{ myOrders.priceSum }}" class="body" row="1" col="1"></Label>
+            </GridLayout>
+        </StackLayout>
+
+        <Label textWrap="true" text="Total de la Venta: $ {{ total }}" class="total"></Label>
+    </StackLayout>
+</ScrollView>

@@ -1,0 +1,61 @@
+{
+  "_from": "nativescript-toasts",
+  "_id": "nativescript-toasts@1.0.3",
+  "_inBundle": false,
+  "_integrity": "sha1-rFhEpA0rWAO4MPLmdHkzR7jM62E=",
+  "_location": "/nativescript-toasts",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "nativescript-toasts",
+    "name": "nativescript-toasts",
+    "escapedName": "nativescript-toasts",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/nativescript-toasts/-/nativescript-toasts-1.0.3.tgz",
+  "_shasum": "ac5844a40d2b5803b830f2e674793347b8cceb61",
+  "_spec": "nativescript-toasts",
+  "_where": "/Users/LEAFAR_10/Documents/booth-count",
+  "author": {
+    "name": "M Danish Siddiqui",
+    "email": "mohammaddsiddiqui@gmail.com",
+    "url": "http://mdanishs.github.io"
+  },
+  "bugs": {
+    "url": "https://github.com/mdanishs/nativescript-toasts/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Provides common API to create toast notifications for android and iOS",
+  "homepage": "https://github.com/mdanishs/nativescript-toasts#readme",
+  "keywords": [
+    "toasts",
+    "notifications",
+    "nativescript"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "nativescript-toasts",
+  "nativescript": {
+    "platforms": {
+      "ios": "1.3.0",
+      "android": "1.1.0"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdanishs/nativescript-toasts.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "typings": "index.d.ts",
+  "version": "1.0.3"
+}

@@ -1,0 +1,9 @@
+<ActionBar class="actionBar" title="Iniciar Sesión"></ActionBar>
+<StackLayout>
+    <!-- <Label class="title" text="Booth Count"></Label> -->
+    <Image src="res://molino" style="margin-top: 2%; margin-bottom: 2%; width: 500px; height: 265px;"></Image>
+<TextField [(ngModel)]="loginCode" (returnPress)="goToPrincipal()" secure="true" ios:class="input" android:class="androidInput" hint="Código Personal"
+    keyboardType="number"></TextField>
+    <Button class="btnLogin" (tap)="goToPrincipal()" text="Iniciar Sesión"></Button>
+    <Button class="btnLogin" (tap)="goToRegister()" text="Registrarme"></Button>
+</StackLayout>

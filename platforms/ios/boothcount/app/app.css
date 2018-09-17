@@ -1,0 +1,44 @@
+/*
+In NativeScript, the app.css file is where you place CSS rules that
+you would like to apply to your entire application. Check out
+http://docs.nativescript.org/ui/styling for a full list of the CSS
+selectors and properties you can use to style UI components.
+
+/*
+In many cases you may want to use the NativeScript core theme instead
+of writing your own CSS rules. For a full list of class names in the theme
+refer to http://docs.nativescript.org/ui/theme.
+*/
+@import '~nativescript-theme-core/css/core.light.css';
+
+.actionBar {
+    background-color: #39a32c;
+    color: white;
+}
+
+.drawerBackground {
+    background-color: #efefef;
+}
+
+.titleBackground {
+    background-color: #39a32c;
+}
+
+.drawerLabel {
+    margin: 15px;
+    font-size: 22px;
+}
+
+.drawerTitle {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px;
+    color: white;
+}
+
+.stack-margin {
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+}

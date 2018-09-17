@@ -1,0 +1,19 @@
+.btnAdd {
+    background-color: #39a32c;
+    color: white;
+    border-radius: 50%;
+    margin: 50px;
+    width: 50%;
+}
+
+.staticLabel {
+    font-weight: bold;
+}
+
+.btn {
+    border-radius: 100%;
+    color: white;
+    background-color: #39a32c;
+    font-size: 25px;
+    font-weight: bold;
+}

@@ -1,0 +1,50 @@
+.stack {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.cardView {
+    width: 90%;
+    background-color: whitesmoke;
+}
+
+.card-stack {
+    padding: 10%;
+}
+
+.title {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 2%;
+    color: black;
+}
+
+.confirm {
+    background-color: #39a32c;
+    width: 70%;
+    border-radius: 50%;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cancel {
+    background-color: #c72e2e;
+    width: 70%;
+    border-radius: 50%;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.product-title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 50px;
+    color: black;
+    text-align: center;
+}
+
+.staticLabel {
+    font-weight: bold;
+}

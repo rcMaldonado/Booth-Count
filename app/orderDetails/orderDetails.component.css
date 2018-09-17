@@ -1,0 +1,41 @@
+.header {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 4%;
+    margin-left: 2%;
+    margin-bottom: 1%;
+    color: black;
+}
+
+.body-header {
+    font-size: 25px;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-bottom: 1%;
+    color: black;
+}
+
+.body {
+    font-size: 20px;
+    color: black;
+    margin-top: 2%;
+    margin-left: 2%;
+
+}
+
+.itemList {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px; 
+    border-bottom-width: 2px;
+    border-color: gray;
+}
+
+.total {
+        font-size: 25px;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-left: 2%;
+        margin-bottom: 1%;
+        color: black;
+}

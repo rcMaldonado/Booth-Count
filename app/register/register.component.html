@@ -1,0 +1,9 @@
+<ActionBar title="Registrarme" class="actionBar">
+        <NavigationButton android.systemIcon="ic_menu_back" (tap)="goBack()"></NavigationButton>
+</ActionBar>
+<StackLayout verticalAlignment="center" class="container">
+    <TextField class="androidInput" hint="Nombre" [(ngModel)]="name"></TextField>
+    <TextField class="androidInput" secure="true" hint="Código Personal" [(ngModel)]="loginCode" keyboardType="number"></TextField>
+    <TextField class="androidInput" hint="Email" [(ngModel)]="email" keyboardType="email" (returnPress)="register()"></TextField>
+    <Button text="Crear Cuenta" class="btnAdd" (tap)="register()"></Button>
+</StackLayout>

@@ -1,0 +1,8 @@
+<ActionBar title="Confirmado" class="actionBar"></ActionBar>
+
+<StackLayout>
+    <Image src="res://checkmark" class="img" horizontalAlignment="center" verticalAlignment="center"></Image>
+    <Label text="¡Venta fue completada con exito! 🎉" class="lblTitle" horizontalAlignment="center"></Label>
+    <Label horizontalAlignment="center" class="lblBody" textWrap="true" text="Para ver las ventas completadas, verifique la sección de Ordenes. Para continuar vendiendo presione confirmado"></Label>
+    <Button text="Confirmado" (tap)="finishSale()" class="btnConfirm"></Button>
+</StackLayout>

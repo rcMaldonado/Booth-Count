@@ -1,0 +1,31 @@
+<ActionBar title="{{ actionBarTitle }}" class="actionBar">
+    <NavigationButton android.systemIcon="ic_menu_back" (tap)="goBack()"></NavigationButton>
+</ActionBar>
+<StackLayout class="container">
+    <ScrollView>
+        <CardView radius="10">
+            <StackLayout class="container">
+                <Label class="label-margin" text="Código del Producto"></Label>
+                <TextField class="textfield-margin" [(ngModel)]="productCode" hint="Código del nombre" keyboardType="number" (returnPress)="addProduct()"></TextField>
+
+                <Label class="label-margin" text="Nombre del Producto"></Label>
+                <TextField class="textfield-margin" [(ngModel)]="productName" hint="Entre el nombre" (returnPress)="addProduct()"></TextField>
+
+                <Label class="label-margin" text="Categoría del Producto"></Label>
+                <StackLayout class="dd-border">
+                    <DropDown hint="Elige la categoría" class="dd" selectedIndex="{{ selectedIndex }}" [items]="products" (selectedIndexChanged)="onchange($event)" (opened)="onopen()"
+                        (closed)="onclose()"></DropDown>
+                </StackLayout>
+
+                <Label class="label-margin" text="Precio del Producto"></Label>
+                <TextField class="textfield-margin" [(ngModel)]="productPrice" hint="Entre el precio del producto" keyboardType="number"
+                    (returnPress)="addProduct()"></TextField>
+
+                <Label class="label-margin" text="Balance Inicial"></Label>
+                <TextField class="textfield-margin" [(ngModel)]="initialBalance" hint="Entre el balance inicial" keyboardType="number" (returnPress)="addProduct()"></TextField>
+
+                <Button text="{{ btnText }}" class="btnAdd" (tap)="addProduct()"></Button>
+            </StackLayout>
+        </CardView>
+    </ScrollView>
+</StackLayout>

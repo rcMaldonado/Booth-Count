@@ -1,0 +1,85 @@
+<ActionBar class="actionBar" title="Inventario">
+    <NavigationButton icon="res://ic_menu" (tap)="openDrawer()"></NavigationButton>
+    <ActionItem android.systemIcon="ic_menu_add" ios.systemIcon="4" ios.position="right" (tap)="addItem()"></ActionItem>
+    <ActionItem *ngIf="isIos" ios:icon="res://ic_menu" ios.position="left" (tap)="openDrawer()"></ActionItem>
+</ActionBar>
+<RadSideDrawer tkExampleTitle tkToggleNavButton>
+    <StackLayout tkDrawerContent class="sideStackLayout drawerBackground">
+        <StackLayout class="sideTitleStackLayout titleBackground">
+            <Label class="drawerTitle" text="Vendedor:"></Label>
+            <Label class="drawerTitle" [text]="name" ([ngModel])="name" textWrap="true"></Label>
+        </StackLayout>
+        <ScrollView>
+            <StackLayout class="sideStackLayout">
+                <StackLayout class="stack-margin" orientation="horizontal" (tap)="toInicio()">
+                    <Image src="res://money" width="32" height="32" stretch="none"></Image>
+                    <Label text="Ventas" class="drawerLabel"></Label>
+                </StackLayout>
+
+                <StackLayout class="stack-margin" orientation="horizontal" (tap)="toInventario()">
+                    <Image src="res://inventario" width="32" height="32" stretch="none"></Image>
+                    <Label text="Inventario" class="drawerLabel"></Label>
+                </StackLayout>
+
+                <StackLayout class="stack-margin" orientation="horizontal" (tap)="toOrdenes()">
+                    <Image src="res://ordenes" width="32" height="32" stretch="none"></Image>
+                    <Label text="Ordenes" class="drawerLabel"></Label>
+                </StackLayout>
+
+                <StackLayout class="stack-margin" orientation="horizontal" (tap)="toAjustes()">
+                    <Image src="res://settings" width="32" height="32" stretch="none"></Image>
+                    <Label text="Ajustes" class="drawerLabel"></Label>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+    <StackLayout tkMainContent>
+        <SearchBar id="searchbarid" hint="Filtrar por código" keyboardType="number" (loaded)="loadSearchBar($event)" [(ngModel)]="searchCode"
+            (submit)="onSubmit($event)" (clear)="onClear($event)"></SearchBar>
+        <GridLayout colums="*" rows="*">
+            <ListView col="0" row="0" [items]="inventory" (itemTap)="onItemTap($event)" class="list-group">
+                <ng-template let-inventory="item" let-i="index" let-odd="odd" let-even="even">
+                    <StackLayout class="list-group-item">
+
+                        <StackLayout orientation="horizontal">
+                            <Label text="Código: " class="staticLabel"></Label>
+                            <Label [text]="inventory.productCode"></Label>
+                        </StackLayout>
+
+                        <StackLayout orientation="horizontal">
+                            <Label text="Nombre: " class="staticLabel"></Label>
+                            <Label [text]="inventory.productName"></Label>
+                        </StackLayout>
+
+                        <StackLayout orientation="horizontal">
+                            <Label text="Categoría: " class="staticLabel"></Label>
+                            <Label [text]="inventory.productCategory"></Label>
+                        </StackLayout>
+
+                        <StackLayout orientation="horizontal">
+                            <Label text="Precio: " class="staticLabel"></Label>
+                            <Label text="$ "></Label>
+                            <Label [text]="inventory.productPrice" textWrap="true"></Label>
+                        </StackLayout>
+
+                        <StackLayout orientation="horizontal">
+                            <Label text="Balance Inicial: " class="staticLabel"></Label>
+                            <Label [text]="inventory.initialBalance"></Label>
+                        </StackLayout>
+
+                        <StackLayout orientation="horizontal">
+                            <Label text="Balance: " class="staticLabel"></Label>
+                            <Label [text]="inventory.balance"></Label>
+                        </StackLayout>
+
+                        <!-- <StackLayout orientation="horizontal">
+                            <Label text="Balance Final: " class="staticLabel"></Label>
+                            <Label [text]="inventory.finalBalance"></Label>
+                        </StackLayout> -->
+
+                    </StackLayout>
+                </ng-template>
+            </ListView>
+        </GridLayout>
+    </StackLayout>
+</RadSideDrawer>

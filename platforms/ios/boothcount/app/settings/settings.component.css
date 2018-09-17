@@ -1,0 +1,21 @@
+.logoutBtn {
+    width: 100%;
+    color: white;
+    background-color: #c12020;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.emailBtn {
+    width: 100%;
+    color: white;
+    background-color: #2081c1;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.labels {
+    color: black;
+    font-size: 22px;
+    margin-top: 20px;
+}

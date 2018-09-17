@@ -1,0 +1,41 @@
+<ActionBar class="actionBar" title="Ajustes">
+    <NavigationButton icon="res://ic_menu" (tap)="openDrawer()"></NavigationButton>
+    <ActionItem ios:icon="res://ic_menu" ios.position="left" (tap)="openDrawer()"></ActionItem>
+</ActionBar>
+<RadSideDrawer tkExampleTitle tkToggleNavButton>
+    <StackLayout tkDrawerContent class="sideStackLayout drawerBackground">
+        <StackLayout class="sideTitleStackLayout titleBackground">
+            <Label class="drawerTitle" text="Vendedor:"></Label>
+            <Label class="drawerTitle" [text]="name" ([ngModel])="name" textWrap="true"></Label>
+        </StackLayout>
+        <ScrollView>
+            <StackLayout class="sideStackLayout">
+                <StackLayout class="stack-margin" orientation="horizontal" (tap)="toInicio()">
+                    <Image src="res://money" width ="32" height="32" stretch="none"></Image>
+                    <Label  text="Ventas" class="drawerLabel"></Label>
+                </StackLayout>
+
+                <StackLayout class="stack-margin" orientation="horizontal" (tap)="toInventario()">
+                    <Image src="res://inventario" width ="32" height="32" stretch="none"></Image>
+                    <Label text="Inventario" class="drawerLabel"></Label>
+                </StackLayout>
+
+                <StackLayout class="stack-margin" orientation="horizontal" (tap)="toOrdenes()">
+                    <Image src="res://ordenes" width ="32" height="32" stretch="none"></Image>
+                    <Label text="Ordenes" class="drawerLabel"></Label>
+                </StackLayout>
+
+                <StackLayout class="stack-margin" orientation="horizontal" (tap)="toAjustes()">
+                    <Image src="res://settings" width ="32" height="32" stretch="none"></Image>
+                    <Label text="Ajustes" class="drawerLabel"></Label>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+    <StackLayout tkMainContent>
+        <Label class="labels" text="Para enviar el reporte de las ventas hechas por un vendedor:" textWrap="true"></Label>
+        <Button class="emailBtn" text="Enviar Reporte" (tap)="sendEmail()"></Button>
+        <Label class="labels" text="Para salir de su cuenta:" textWrap="true"></Label>
+        <Button class="logoutBtn" text="Cerrar Sesión" (tap)="logout()"></Button>
+    </StackLayout>
+</RadSideDrawer>

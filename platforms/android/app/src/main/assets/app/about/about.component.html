@@ -1,0 +1,49 @@
+<ActionBar class="actionBar" title="Acerca De">
+    <NavigationButton (tap)="openDrawer()" icon="res://ic_menu"></NavigationButton>
+</ActionBar>
+<RadSideDrawer tkExampleTitle tkToggleNavButton>
+    <StackLayout tkDrawerContent class="sideStackLayout drawerBackground">
+        <StackLayout class="sideTitleStackLayout titleBackground">
+            <Label class="drawerTitle" text="Vendedor:"></Label>
+            <Label class="drawerTitle" [text]="name" textWrap="true"></Label>
+        </StackLayout>
+        <ScrollView>
+
+            <StackLayout class="sideStackLayout">
+
+                <StackLayout class="stack-margin" orientation="horizontal" (tap)="toInicio()">
+                    <Image src="res://money" width="32" height="32" stretch="none"></Image>
+                    <Label text="Ventas" class="drawerLabel"></Label>
+                </StackLayout>
+
+                <StackLayout class="stack-margin" orientation="horizontal" (tap)="toInventario()">
+                    <Image src="res://inventario" width="32" height="32" stretch="none"></Image>
+                    <Label text="Inventario" class="drawerLabel"></Label>
+                </StackLayout>
+
+                <StackLayout class="stack-margin" orientation="horizontal" (tap)="toOrdenes()">
+                    <Image src="res://ordenes" width="32" height="32" stretch="none"></Image>
+                    <Label text="Ordenes" class="drawerLabel"></Label>
+                </StackLayout>
+
+                <StackLayout class="stack-margin" orientation="horizontal" (tap)="toAjustes()">
+                    <Image src="res://settings" width="32" height="32" stretch="none"></Image>
+                    <Label text="Ajustes" class="drawerLabel"></Label>
+                </StackLayout>
+
+                <StackLayout class="stack-margin" orientation="horizontal" (tap)="toAbout()">
+                    <Image src="res://about" width="32" height="32" stretch="none"></Image>
+                    <Label text="Acerca De" class="drawerLabel"></Label>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+    <StackLayout tkMainContent>
+        <Label class="info" textWrap="true" text="Esta aplicación móvil esta hecha para La Federación de Asociaciones Precuarias de Puerto Rico. El propósito de la misma es para tener un inventario y llevar la venta de productos que  vende la compañía en las ferias.Esta aplicación fue hecha bajo la clase INTD-4998 primera experiencia laboral de la Universidad de Puerto Rico en Arecibo."></Label>
+
+        <Label class="me" textWrap="true" text="Hecha por: Rafael E. Colón Maldonado"></Label>
+
+        <Image src="res://upra" class="image" horizontalAlignment="center"></Image>
+    </StackLayout>
+</RadSideDrawer>
